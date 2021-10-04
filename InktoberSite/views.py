@@ -6,5 +6,8 @@ from .models import ToDoList, Item
 # Creating view a.k.a 
 def index(response, name):
     ls = ToDoList.objects.get(name=name)
-    item = ls.item_set.get(id=1)
-    return HttpResponse(f"<h1>{ls.name}</h1><br></br><p>{str(item.text)}</p>")
+    return render(response, "InktoberSite/base.html", {})
+
+def home(response):
+    # TODO: Make it 
+    return render(response, "InktoberSite/home.html", {})
