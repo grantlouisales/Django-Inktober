@@ -1,0 +1,14 @@
+{% extends "InktoberSite/base.html" %}
+
+{% block title %}
+Create
+{% endblock %}
+
+{% block content %}
+
+<form method = "post" action="/user/">
+    {{form.as_p}}
+    <button type = "submit", name = "save">Create New</button>
+</form>
+
+{% endblock %}

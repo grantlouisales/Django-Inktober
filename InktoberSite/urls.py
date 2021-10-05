@@ -3,6 +3,7 @@ from . import views
 
 # Sets up your urls depending on what you type you go to different views a.k.a pages
 urlpatterns = [
-    path("<str:name>", views.index, name="index"),
-    path("", views.home, name = "home")
+    path("", views.home, name = "home"),
+    path("info/", views.info, name = "info"),
+    path("user/", views.user, name = "user"),
 ]
