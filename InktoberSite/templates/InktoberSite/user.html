@@ -1,12 +1,13 @@
 {% extends "InktoberSite/base.html" %}
 
 {% block title %}
-Create
+User
 {% endblock %}
 
 {% block content %}
 
 <form method = "post" action="/user/">
+    {% csrf_token %}
     {{form.as_p}}
     <button type = "submit", name = "save">Create New</button>
 </form>
