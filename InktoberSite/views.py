@@ -1,7 +1,9 @@
+from django.http.response import HttpResponseRedirect
 from django.shortcuts import render
 from django.http import HttpResponse
 from .models import ToDoList, Item
-from .forms import User
+from .forms import UserInfo
+from .models import User
 
 # Create your views here.
 
@@ -36,14 +38,23 @@ def user(response):
     user like first name, last name, email, and text submission box. This
     text submission box is going to be used for a response from the user. The 
     text box will ask for a inktober prompt. It will then try to store the user's
-    information in a database of some sort.
+    information in a database of some sort when I have time to.
     """
 
     # Saying that if the response is post make the users form submission hidden
     # else leave it unhidden.
     if response.method == "POST":
-        form = User(response.POST)
+        form = UserInfo(response.POST)
+
+        if form.is_valid():
+            n = form.cleaned_data["fname"]
+            t = User(fname = n)
+            t.save()
+            return HttpResponseRedirect("/response")
     else:
-        form = User()
+        form = UserInfo()
 
     return render(response, "InktoberSite/user.html", {"form":form})
+
+def inputresponse(response):
+    return render(response, "InktoberSite/userInputResponse.html", {})

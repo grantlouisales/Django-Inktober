@@ -1,15 +1,17 @@
 {% extends "InktoberSite/base.html" %}
 
-{% block title %}
-User
-{% endblock %}
-
-{% block content %}
-
-<form method = "post" action="/user/">
-    {% csrf_token %}
-    {{form.as_p}}
-    <button type = "submit", name = "save">Create New</button>
-</form>
-
-{% endblock %}
+<!doctype html>
+<html lang=en>
+    <head>
+        <title>{% block title %} User {% endblock %}</title>
+    </head>
+    <body>
+        {% block content %}
+        <form method = "post" action="/user/">
+            {% csrf_token %}
+            {{form.as_p}}
+            <button type = "submit", name = "save">Create New</button>
+        </form>
+        {% endblock %}
+    </body>
+</html>

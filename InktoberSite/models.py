@@ -15,3 +15,12 @@ class Item(models.Model):
 
     def __str__(self):
         return self.text
+
+class User(models.Model):
+    fname = models.CharField(max_length=200)
+    lname = models.CharField(max_length=200)
+    email = models.CharField(max_length=200)
+    prompt_submission = models.CharField(max_length=200)
+
+    def __str__(self):
+        return self.fname + self.lname
