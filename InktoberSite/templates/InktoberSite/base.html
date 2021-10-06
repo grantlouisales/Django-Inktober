@@ -10,20 +10,31 @@
 
     <title>{% block title %}Inktober{% endblock %}</title>
 </head>
+
+<style>
+    body {
+        background-color: #343a40;
+    }
+    #content {
+        color:white;
+    }
+</style>
+
 <body>
 
     <div class="container">
-        <nav class="navbar navbar navbar-light bg-light">
-            <a class="navbar-brand" href="/">Home</a>
-            <a class="navbar-brand" href="/info">Info</a>
-            <a class="navbar-brand" href="/user">User</a>
+        <nav class="navbar navbar navbar-light bg-dark">
+            <a class="navbar-brand text-light font-weight-bold font-italic" href="/">Home</a>
+            <a class="navbar-brand text-light font-weight-bold font-italic" href="/info">Info</a>
+            <a class="navbar-brand text-light font-weight-bold font-italic" href="/user">User</a>
         </nav>
     </div>
 
     <div id="content", name="content", class="main">
         <div class="row justify-content-center">
-            <div class="col-8">
-                <h1 class="mt-2 row justify-content-center">Inktober</h1>
+            <div class="col-7">
+                <br><br></br></br>
+                <h1 class="mt-2 row justify-content-center text-light font-weight-bold font-italic">The Inktober Challenge!</h1>
                 <hr class="mt-0 mb-4">
                 {% block content %}
                 {% endblock %}
