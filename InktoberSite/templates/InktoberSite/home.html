@@ -9,20 +9,27 @@
     </head>
     <body>
         {% block content %}
-            <p> Jake Parker created Inktober in 2009 as a challenge to improve his inking skills and develop positive drawing habits. 
+            <p class=text-center> Jake Parker created Inktober in 2009 as a challenge to improve his inking skills and develop positive drawing habits. 
                 It has since grown into a worldwide endeavor with thousands of artists taking on the challenge every year.
                 This challenge consists of two types. 31 drawings a day for one month straight or 
                 1 drawing a week for a year straigt. The other factor to be taken place in this challenge is to use a
-                medium that uses ink. This can range from a sharpie, pen or brush pen. The purpose of this challenge is to
-                </p>
-                <br></br>
+                medium that uses ink. This can range from a sharpie, pen or brush pen. The purpose of this challenge is to get yourself to
+                make drawing habits. It lets you get out of your comfort zone. After one Inktober you will continue these every year from
+                how much freedom you get from this.
+            </p>
+            <br>
             <h2 class="mt-2 row justify-content-center text-light font-weight-bold font-italic"> THESE ARE SOME DRAWINGS DONE... </h2>
-            <div class="pic-group1">
+            <div class="pic-group-1">
                 <img src= "{% static  'InktoberSite/pictures/drawingone.jpg' %}" alt="Inktober Drawing" width="500" height="500" class="rounded float-left">
                 <img src= "{% static  'InktoberSite/pictures/drawingthree.jpg' %}" alt="Inktober Drawing 2" width="500" height="500" class="rounded float-right">
-                <img src= "{% static  'InktoberSite/pictures/drawingfive.jpg' %}" alt="Inktober Drawing" width="500" height="500" class="rounded float-left">
-                <img src= "{% static  'InktoberSite/pictures/drawingsix.jpg' %}" alt="Inktober Drawing 2" width="500" height="500" class="rounded float-right">
             </div>
+            <br>
+            <br>
+            <div class="pic-group-2 mt-0">
+                <img src= "{% static  'InktoberSite/pictures/drawingfive.jpg' %}" alt="Inktober Drawing" width="500" height="500" class="rounded float-left">
+                <img src= "{% static  'InktoberSite/pictures/drawingseven.jpg' %}" alt="Inktober Drawing 2" width="500" height="500" class="rounded float-right">
+            </div>
+            <p> </p>
         {% endblock %}
 
     <!-- Optional JavaScript -->
