@@ -1,6 +1,6 @@
 from django.http.response import HttpResponseRedirect
 from django.shortcuts import render
-from django.http import HttpResponse
+from django.http import HttpResponse, request
 from .models import ToDoList, Item
 from .forms import UserInfo
 from .models import User, Video
@@ -48,17 +48,16 @@ def user(response):
 
     # Saying that if the response is post make the users form submission hidden
     # else leave it unhidden.
+    form = UserInfo()
     if response.method == "POST":
-        form = UserInfo(response.POST)
+        form = UserInfo(request.POST)
 
         if form.is_valid():
             form.save()
             return HttpResponseRedirect("/response")
 
-    else:
-        form = UserInfo()
-
-    return render(response, "InktoberSite/user.html", {"form":form})
+    context = {'form': form}
+    return render(response, "InktoberSite/user.html", context)
 
 def inputresponse(response):
     return render(response, "InktoberSite/userInputResponse.html", {})
