@@ -3,7 +3,7 @@ from django.shortcuts import render
 from django.http import HttpResponse
 from .models import ToDoList, Item
 from .forms import UserInfo
-from .models import User
+from .models import User, Video
 
 # Create your views here.
 
@@ -16,9 +16,14 @@ def home(response):
     in the website. This will be the page the that will show the 
     overview of the website.
     """
-    return render(response, "InktoberSite/home.html", {})
+    videos = Video.objects.all()
+    context = {
+        "videos" : videos
+    }
 
-def info(response):
+    return render(response, "InktoberSite/home.html", context)
+
+def FAQ(response):
     """
     This is the information page for the Inktober website.
 
@@ -27,7 +32,7 @@ def info(response):
     sketchbooks or prompts. This will also show a random years inktober prompts
     given.
     """
-    return render(response, "InktoberSite/info.html", {})
+    return render(response, "InktoberSite/FAQ.html", {})
 
 
 def user(response):

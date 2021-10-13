@@ -1,5 +1,6 @@
 {% extends 'InktoberSite/base.html' %}
 {% load static %}
+{% load embed_video_tags %}
 
 <!doctype html>
 <html lang=en>
@@ -15,7 +16,8 @@
                 1 drawing a week for a year straigt. The other factor to be taken place in this challenge is to use a
                 medium that uses ink. This can range from a sharpie, pen or brush pen. The purpose of this challenge is to get yourself to
                 make drawing habits. It lets you get out of your comfort zone. After one Inktober you will continue these every year from
-                how much freedom you get from this.
+                how much freedom you get from this. If you still feel lost after the description, I have added a video at the bottom that has
+                the creator of Inktober describe Inktober.
             </p>
             <br>
             <h2 class="mt-2 row justify-content-center text-light font-weight-bold font-italic"> THESE ARE SOME DRAWINGS DONE... </h2>
@@ -27,7 +29,11 @@
                 <img src= "{% static  'InktoberSite/pictures/drawingfive.jpg' %}" alt="Inktober Drawing" width="500" height="500" class="rounded float-left m-2">
                 <img src= "{% static  'InktoberSite/pictures/drawingseven.jpg' %}" alt="Inktober Drawing 2" width="500" height="500" class="rounded float-right m-2">
             </div>
-            <p> </p>
+            <div class="video justify-content-center rounded m-2">
+                {%for i in videos %}
+                {% video i.video '100% x 600'%}
+                {% endfor %}
+            </div>
         {% endblock %}
 
     <!-- Optional JavaScript -->

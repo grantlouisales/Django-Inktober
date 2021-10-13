@@ -1,4 +1,5 @@
 from django.db import models
+from embed_video.fields import EmbedVideoField
 
 # Create your models here.
 class ToDoList(models.Model):
@@ -24,3 +25,6 @@ class User(models.Model):
 
     def __str__(self):
         return self.fname + self.lname
+
+class Video(models.Model):
+    video = EmbedVideoField()

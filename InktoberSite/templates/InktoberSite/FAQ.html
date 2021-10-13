@@ -1,0 +1,67 @@
+{% extends "InktoberSite/base.html" %}
+{% load static %}
+
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title> {% block title %} FAQ {% endblock %} </title>
+    </head>
+    <body>
+        {% block content %}
+        <div class="questions">
+            <img src= "{% static 'InktoberSite/pictures/drawingfourteen.jpg' %}" alt="Inktober Drawing" width="100%" height="400" class="rounded m-3">
+            <h1 class="font-weight-bold font-italic text-start"> Q: WHAT IS INKTOBER </h1>
+            <p class="font-weight-bold text-start">
+                A: Inktober is a month long art challenge created by artist Jake Parker 
+                that is focused on improving skill and developing positive drawing habits. 
+                Every day for the month of October anyone participating in the Inktober challenge 
+                creates an ink drawing and posts it online. Remember to use the hashtags #inktober 
+                and #inktober(current year) if you want your art to be seen by everyone.
+            </p>
+            <br>
+            <h1 class="font-weight-bold font-italic text-start"> Q: IS INKTOBER A CHALLENGE OR A CONTEST </h1>
+
+            <p class="font-weight-bold text-start">
+               A: Inktober is just a framework to get yourself to draw better, flex a little, and/or have some fun with your art. 
+               Inktober is a challenge NOT a contest to see who the best artist is. It’s a challenge to see how much you can improve your art 
+               in a month, and to be inspired or to help inspire other artists to do the same.⁣
+            </p>
+            <p class="font-weight-bold text-start">
+               For artists looking to get even more out of Inktober, the Inktober Awards is an official contest hosted by DeviantArt in 
+               partnership with Inktober, featuring high-value prizes for artists of all skill levels.
+            </p>
+            <br>
+
+
+            <h1 class="font-weight-bold font-italic text-start"> Q: Can I only use ink for my drawing to count? </h1>
+            <p class="font-weight-bold text-start">
+                A: No. Whatever your creative process is, use it. If you want to sketch in a pencil and then ink on top that's fine!
+                If you want to sketch in crayon and then scan it into the computer and do your finished inking digitally, go for it!
+                As long as you are creating a new ink drawing every day, it counts.
+            </p>
+            <br>
+
+
+            <h1 class="font-weight-bold font-italic text-start"> Q: Where do I send my Inktober drawings? </h1>
+            <p class="font-weight-bold text-start">
+                A:  You do not need to send your drawings to us. Simply post photos of your artwork onto your own social media account 
+                and tag it with #inktober and #inktober2020. Others will be able to see it and you can follow those tags to see the work of everyone else.
+            </p>
+            <br>
+
+
+            <h1 class="font-weight-bold font-italic text-start"> Q: Can I work digitally? </h1>
+            <p class="font-weight-bold text-start">
+                A: Yes. Initially, the challenge of Inktober was focused on traditional inking. Although learning how to ink digitally is a skill separate
+                from traditional inking it is no less valid. If you want to improve your digital inking skills then doing Inktober digitally is a great way to challenge yourself. 
+                Just be cool to those who want to use traditional inks. And traditional inkers, be cool to those who are trying to improve with their digital inking.
+            </p>
+            <br>
+
+        </div>
+        {% endblock %}
+    </body>
+</html>
