@@ -1,5 +1,9 @@
 from django.db import models
+from django.forms import widgets
+from django import forms
 from embed_video.fields import EmbedVideoField
+
+from InktoberSite import forms
 
 # Create your models here.
 class ToDoList(models.Model):
@@ -21,7 +25,7 @@ class User(models.Model):
     fname = models.CharField(max_length=200)
     lname = models.CharField(max_length=200)
     email = models.CharField(max_length=200)
-    prompt_submission = models.CharField(max_length=200)
+    prompt = models.CharField(max_length=200)
 
     def __str__(self):
         return self.fname + self.lname

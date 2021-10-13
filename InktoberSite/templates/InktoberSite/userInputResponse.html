@@ -7,5 +7,11 @@ Response Page
 {% block content %}
 
 <h1>Thank you so much for your submission!</h1>
+<ol>
+    <li>{{form.fname}}</li>
+    <li>{{form.lname}}</li>
+    <li>{{form.email}}</li>
+    <li>{{form.prompt_idea}}</li>
+</ol>
 
 {% endblock %}

@@ -52,10 +52,9 @@ def user(response):
         form = UserInfo(response.POST)
 
         if form.is_valid():
-            n = form.cleaned_data["fname"]
-            t = User(fname = n)
-            t.save()
+            form.save()
             return HttpResponseRedirect("/response")
+
     else:
         form = UserInfo()
 
