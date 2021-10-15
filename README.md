@@ -5,7 +5,7 @@ This web app was made to teach me django. With django I was able to make a websi
 The purpose of this software was to teach me new skills. I wanted to cover more things and learn new skils that can be applicable to other projects. I had a ton of fun with this project and was glad I learned something new in the process.
 
 # Yotube Demo
-[Software Demo Video]()
+[Software Demo Video](https://www.youtube.com/watch?v=kxTJNp6ZWVs)
 
 # Webpages
 * HOME PAGE - The home page talks about the overall idea of the website. This also describes what Inktober is and has some pictures drawn for it along with a video to describe Inktober. This page is dynamic due to the embed video on the front page.
